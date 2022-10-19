@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/code.h
+bitset
+-
+string
+-
+
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/main.cpp
+iostream
+-
+iostream
+-
+fstream
+-
+string
+-
+istream
+-
+bitset
+-
+parser.h
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/parser.h
+code.h
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/code.h
+
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/parser.h
+fstream
+-
+string
+-
+

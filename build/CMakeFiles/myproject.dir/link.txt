@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -pedantic -std=c++11  -rdynamic CMakeFiles/myproject.dir/src/code.cpp.o CMakeFiles/myproject.dir/src/main.cpp.o CMakeFiles/myproject.dir/src/parser.cpp.o CMakeFiles/myproject.dir/src/symboltable.cpp.o  -o myproject 
