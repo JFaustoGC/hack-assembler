@@ -17,9 +17,6 @@ int main(int argc, char **argv) {
     std::string mnemomic;
     std::string binary = "";
     std::bitset<16> bin;
-    std::string dest;
-    std::string comp;
-    std::string jump;
     
 
     if (std::ifstream(pathr).good()) {
@@ -32,19 +29,9 @@ int main(int argc, char **argv) {
                 mnemomic = parser.symbol();
                 bin = std::bitset<16> (std::stoi(mnemomic));
                 binary = bin.to_string();
-                ofs << binary << std::endl;
-                binary = "";
                 break;
             case Parser::cType::C_COMMAND:
-                dest = parser.dest();
-                comp = parser.comp();
-                jump = parser.jump();
-                comp = opcode.comp(comp);
-                dest = opcode.dest(dest);
-                jump = opcode.jump(jump);
-                binary = "111" + comp + dest + jump;
-                ofs << binary << "\n";
-                binary = "";
+                binary = "111" + opcode.comp(parser.comp()) + opcode.dest(parser.dest()) + opcode.jump(parser.jump());
                 break;
             case Parser::cType::L_COMMAND:
                 mnemomic = parser.symbol();
@@ -53,7 +40,8 @@ int main(int argc, char **argv) {
             case Parser::cType::IGNORE:
                 break;
            }
- 
+            ofs << binary << "\n";
+            binary = "";
         }
 
     } 

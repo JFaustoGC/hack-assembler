@@ -8,19 +8,19 @@ Code::Code() {
 std::string Code::dest(std::string mnemonic) {
     mnemonic.erase(remove_if(mnemonic.begin(), mnemonic.end(), isspace), mnemonic.end());
     //std::cout << "received " << mnemonic << "\n";
-    if (mnemonic.compare("") == 0)
+    if (mnemonic == "")
         return std::string("000");
-    else if (mnemonic.compare("M") == 0)
+    else if (mnemonic == "M")
         return std::string("001");
-    else if (mnemonic.compare("D") == 0)
+    else if (mnemonic == "D")
         return std::string("010");
-    else if (mnemonic.compare("MD") == 0)
+    else if (mnemonic == "MD")
         return std::string("011");
-    else if (mnemonic.compare("A") == 0)
+    else if (mnemonic == "A")
         return std::string("100");
-    else if (mnemonic.compare("AM") == 0)
+    else if (mnemonic == "AM")
         return std::string("101");
-    else if (mnemonic.compare("AD") == 0)
+    else if (mnemonic == "AD")
         return std::string("110");
     else
         return std::string("111");
@@ -29,19 +29,19 @@ std::string Code::dest(std::string mnemonic) {
 std::string Code::jump(std::string mnemonic) {
     mnemonic.erase(remove_if(mnemonic.begin(), mnemonic.end(), isspace), mnemonic.end());
     //std::cout << "received " << mnemonic << "\n" ;
-    if (mnemonic.compare("") == 0)
+    if (mnemonic == "")
         return std::string("000");
-    else if (mnemonic.compare("JGT") == 0)
+    else if (mnemonic == "JGT")
         return std::string("001");
-    else if (mnemonic.compare("JEQ") == 0)
+    else if (mnemonic == "JEQ")
         return std::string("010");
-    else if (mnemonic.compare("JGE") == 0)
+    else if (mnemonic == "JGE")
         return std::string("011");
-    else if (mnemonic.compare("JLT") == 0)
+    else if (mnemonic == "JLT")
         return std::string("100");
-    else if (mnemonic.compare("JNE") == 0)
+    else if (mnemonic == "JNE")
         return std::string("101");
-    else if (mnemonic.compare("JLE") == 0)
+    else if (mnemonic == "JLE")
         return std::string("110");
     else 
         return std::string("111");
