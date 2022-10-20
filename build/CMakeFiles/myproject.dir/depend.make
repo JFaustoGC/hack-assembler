@@ -7,9 +7,11 @@ CMakeFiles/myproject.dir/src/code.cpp.o: ../src/code.h
 CMakeFiles/myproject.dir/src/main.cpp.o: ../src/code.h
 CMakeFiles/myproject.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/myproject.dir/src/main.cpp.o: ../src/parser.h
+CMakeFiles/myproject.dir/src/main.cpp.o: ../src/symboltable.h
 
 CMakeFiles/myproject.dir/src/parser.cpp.o: ../src/parser.cpp
 CMakeFiles/myproject.dir/src/parser.cpp.o: ../src/parser.h
 
 CMakeFiles/myproject.dir/src/symboltable.cpp.o: ../src/symboltable.cpp
+CMakeFiles/myproject.dir/src/symboltable.cpp.o: ../src/symboltable.h
 

@@ -1,4 +1,5 @@
 #include "parser.h"
+#include <algorithm>
 
 Parser::Parser(std::string path) {
     filestream = std::ifstream (path);
@@ -12,11 +13,17 @@ bool Parser::hasMoreCommands () {
     return filestream.peek() != EOF;
 }
 
+void Parser::reset() {
+    filestream.clear();
+    filestream.seekg(0);
+}
+
 void Parser::advance () {
     std::getline(filestream, command);
 }
 
 Parser::cType Parser::commandType() {
+    command.erase(std::remove_if(command.begin(), command.end(), ::isspace), command.end());
     if (command.size() <= 1 || command[0] == '/')
         return Parser::cType::IGNORE;
     else if (command[0] == '(')
@@ -28,7 +35,7 @@ Parser::cType Parser::commandType() {
 }
 
 std::string Parser::symbol() {
-       return command.substr(1, command.size() - 2); 
+       return command.substr(1, command.size() - 1); 
 }
 
 std::string Parser::dest() {

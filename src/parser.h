@@ -18,6 +18,7 @@ public:
     ~Parser();
     bool hasMoreCommands();
     void advance();
+    void reset();
     cType commandType();
     std::string symbol();
     std::string dest();

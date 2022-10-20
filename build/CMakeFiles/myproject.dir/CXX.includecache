@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/code.cpp
-code.h
-/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/code.h
-iostream
--
-algorithm
--
-
 /mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/code.h
 bitset
 -
@@ -37,9 +29,23 @@ parser.h
 /mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/parser.h
 code.h
 /mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/code.h
+symboltable.h
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/symboltable.h
+
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/parser.cpp
+parser.h
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/parser.h
+algorithm
+-
 
 /mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/parser.h
 fstream
+-
+string
+-
+
+/mnt/c/Users/pp_go/OneDrive/Escritorio/Code/assembler/src/symboltable.h
+unordered_map
 -
 string
 -

@@ -7,9 +7,10 @@
 class Symboltable
 {
 private:
-    std::unordered_map<std::string, int> table;
+    
 
 public:
+    std::unordered_map<std::string, int> table;
     Symboltable();
     void addEntry(std::string symbol, int address);
     bool contains(std::string symbol);
